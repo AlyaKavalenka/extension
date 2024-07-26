@@ -1,13 +1,15 @@
 import { setCity } from '../api/store/citySlice';
-import { useAppDispatch } from '../api/store/hooks';
+import { useAppDispatch, useAppSelector } from '../api/store/hooks';
 
 export default function CitySelector() {
   const dispatch = useAppDispatch();
+  const city = useAppSelector((state) => state.city.value);
 
   return (
     <select
       name='city'
       id='city'
+      defaultValue={city}
       onChange={(e) => {
         dispatch(setCity(e.target.value));
       }}
