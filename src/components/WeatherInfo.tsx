@@ -21,5 +21,5 @@ export default function WeatherInfo() {
     fetchWeather();
   }, [city]);
 
-  return <div dangerouslySetInnerHTML={{ __html: weather || '' }}></div>;
+  return <div dangerouslySetInnerHTML={{ __html: weather || '' }} className='weather-info'></div>;
 }

@@ -15,9 +15,9 @@ export default function CitySelector() {
       }}
     >
       <option value=''>current location</option>
-      <option value='Minsk'>Minsk</option>
-      <option value='London'>London</option>
-      <option value='Paris'>Paris</option>
+      <option value='minsk'>Minsk</option>
+      <option value='london'>London</option>
+      <option value='paris'>Paris</option>
     </select>
   );
 }

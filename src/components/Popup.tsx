@@ -6,7 +6,6 @@ export default function Popup() {
     <section>
       <h1>Weather Extension</h1>
       <CitySelector />
-      <WeatherInfo />
     </section>
   )
 }
