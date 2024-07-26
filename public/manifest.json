@@ -7,5 +7,21 @@
   "action": {
     "default_popup": "popup.html",
     "default_icon": "cloudy.png"
+  },
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.npr.org/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "cloudy.png",
+    "32": "cloudy.png",
+    "48": "cloudy.png",
+    "128": "cloudy.png"
+  },
+  "background": {
+    "service_worker": "background.js"
   }
 }
