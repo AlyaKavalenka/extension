@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
-import { useAppSelector } from '../api/store/hooks';
 
-export default function WeatherInfo() {
-  const city = useAppSelector((state) => state.city.value);
+export default function WeatherInfo(props: { city: string }) {
+  const { city } = props;
 
   const [weather, setWeather] = useState<string | null>(null);
 
@@ -21,5 +20,10 @@ export default function WeatherInfo() {
     fetchWeather();
   }, [city]);
 
-  return <div dangerouslySetInnerHTML={{ __html: weather || '' }} className='weather-info'></div>;
+  return (
+    <div
+      dangerouslySetInnerHTML={{ __html: weather || '' }}
+      className='weather-info'
+    ></div>
+  );
 }

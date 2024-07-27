@@ -12,12 +12,13 @@ export default function CitySelector() {
       defaultValue={city}
       onChange={(e) => {
         dispatch(setCity(e.target.value));
+        chrome.storage.local.set({ city: e.target.value });
       }}
     >
       <option value=''>current location</option>
-      <option value='minsk'>Minsk</option>
-      <option value='london'>London</option>
-      <option value='paris'>Paris</option>
+      <option value='Minsk'>Minsk</option>
+      <option value='London'>London</option>
+      <option value='Paris'>Paris</option>
     </select>
   );
 }

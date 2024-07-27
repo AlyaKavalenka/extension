@@ -8,7 +8,7 @@
     "default_popup": "popup.html",
     "default_icon": "cloudy.png"
   },
-  "permissions": ["activeTab", "scripting"],
+  "permissions": ["activeTab", "scripting", "storage"],
   "content_scripts": [
     {
       "matches": ["https://www.npr.org/*"],

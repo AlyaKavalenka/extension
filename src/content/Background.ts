@@ -5,4 +5,8 @@ chrome.action.onClicked.addListener((tab) => {
   });
 });
 
+chrome.storage.onChanged.addListener(() => {
+  chrome.tabs.reload();
+});
+
 export {};

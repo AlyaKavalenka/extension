@@ -4,8 +4,8 @@ import './WeatherBtn.css';
 import { store } from '../../api/store/store';
 import { useState } from 'react';
 
-export default function WeatherBtn(props: { iconUrl: string }) {
-  const { iconUrl } = props;
+export default function WeatherBtn(props: { iconUrl: string; city: string }) {
+  const { iconUrl, city } = props;
   const [isClicked, setIsClicked] = useState(false);
 
   return (
@@ -20,7 +20,7 @@ export default function WeatherBtn(props: { iconUrl: string }) {
         >
           <img src={iconUrl} alt='weather button' />
         </button>
-        {isClicked && <WeatherInfo />}
+        {isClicked && <WeatherInfo city={city} />}
       </section>
     </Provider>
   );
