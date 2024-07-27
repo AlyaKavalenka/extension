@@ -1,11 +1,16 @@
 import CitySelector from './CitySelector';
-import WeatherInfo from './WeatherInfo';
 
 export default function Popup() {
   return (
     <section>
-      <h1>Weather Extension</h1>
+      <h3
+        style={{
+          textWrap: 'nowrap',
+        }}
+      >
+        Weather Extension
+      </h3>
       <CitySelector />
     </section>
-  )
+  );
 }
