@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+## Weather Extension for Chrome
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a Chrome extension that works on the news site https://www.npr.org. The extension adds a popup page where users can select a city to display weather information. The selected city is stored using Chrome's storage API. On the news site, an icon is added next to each news header, which, when clicked, shows the weather information for the selected city.
 
-## Available Scripts
+#### Features:
+- Popup page to select a city (3 cities to choose from).
+- Default city selection if the user hasn't selected a city.
+- Weather icon next to each news header on the NPR website.
+- Clicking the weather icon shows a weather window.
 
-In the project directory, you can run:
+#### Technologies Used:
+- React.js
+- TypeScript
+- Chrome Extensions API
+- Redux (for state management)
 
-### `npm start`
+## Installation and Setup
+Follow these steps to install and test the extension locally.
+Prerequisites:
+  - Node.js and npm (Node Package Manager)
+  - Chrome browser
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### Steps:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Clone the repository:
 
-### `npm test`
+     ```bash
+      git clone https://github.com/AlyaKavalenka/extension.git
+      cd weather-extension
+      ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies:
 
-### `npm run build`
+      ```bash
+      npm install
+      ```
+3. Build the extension:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+      ```bash
+      npm run build
+      ```
+4. Load the extension into Chrome:
+   1. Open Chrome and go to `chrome://extensions/`.
+   2. Enable "Developer mode" by toggling the switch in the top right corner.
+   3. Click on "Load unpacked" and select the `dist` folder in the project directory.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. Testing the extension:
+   1. Navigate to https://www.npr.org.
+   2. Open the extension popup by clicking the extension icon next to the address bar.
+   3. Select a city from the dropdown menu.
+   4. Weather icons should appear next to each news header.
+   5. Click on an icon to see the weather information.

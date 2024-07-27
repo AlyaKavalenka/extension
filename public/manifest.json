@@ -1,25 +1,33 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
+  "manifest_version": 3,
+  "short_name": "Weather extension",
+  "name": "Weather extension",
+  "description": "Weather extension",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "cloudy.png"
+  },
+  "permissions": ["activeTab", "scripting", "storage"],
+  "content_scripts": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "matches": ["https://www.npr.org/*"],
+      "js": ["content.js"]
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "icons": {
+    "16": "cloudy.png",
+    "32": "cloudy.png",
+    "48": "cloudy.png",
+    "128": "cloudy.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["cloudy.png"],
+      "matches": ["https://www.npr.org/*"]
+    }
+  ]
 }
